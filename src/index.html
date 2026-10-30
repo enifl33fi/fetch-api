@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Пам пам пидам, пум пум пидумпум</title>
+    <style>
+        #users { display: flex; flex-wrap: wrap; gap: 12px; }
+        article { border: 1px solid #ccc; border-radius: 8px; padding: 12px; width: 220px; }
+        article[data-state="error"] { border-color: #c00; }
+        article[data-state="aborted"] { border-color: #999; opacity: .6; }
+        .name { margin: 0 0 6px; font-size: 16px; }
+        .email, .city, .company { display: block; font-size: 13px; }
+        #summary[data-state="error"] { color: #c00; }
+        #summary[data-state="partial"] { color: #b60; }
+        #summary[data-state="success"] { color: #080; }
+    </style>
+</head>
+<body>
+<h4 id="login">enifl33fi</h4>
+
+<button id="cancel" type="button">Отменить запросы</button>
+
+<output id="summary" data-state="loading">Загрузка...</output>
+
+<section id="users"></section>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

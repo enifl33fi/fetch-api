@@ -1,0 +1,14 @@
+{
+  "name": "fetch-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').mkdirSync('dist',{recursive:true});require('fs').copyFileSync('src/index.html','dist/index.html')\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
